@@ -3,6 +3,7 @@ import { DrinkButtons } from "./components/DrinkButtons";
 import { DrinkChoice } from "./components/DrinkChoice";
 import { coffee, tea } from "./utils/data";
 import { useState } from "react";
+import { DrinkSearch } from "./components/DrinkSearch";
 
 export const App = () => {
   const greeting = "Welcome to our cafe!";
@@ -16,6 +17,8 @@ export const App = () => {
       ) : (
         <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
       )}
+      ;
+      <DrinkSearch />
     </div>
   );
 };
