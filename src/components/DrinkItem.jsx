@@ -1,10 +1,10 @@
 import "./DrinkItem.css";
 
-export const DrinkItem = ({ drink }) => {
+export const DrinkItem = ({ drink, clickFn }) => {
   return (
-    <div className="drink-item">
+    <button className="drink-item" onClick={() => clickFn(drink)}>
       <img src={drink.imgUrl} alt={drink.alt} />
       <p>{drink.name}</p>
-    </div>
+    </button>
   );
 };
