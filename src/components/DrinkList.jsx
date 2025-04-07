@@ -3,14 +3,17 @@
 // this will be an array of drink objects.
 
 import { DrinkItem } from "./DrinkItem";
+import { Grid, GridItem } from "@chakra-ui/react";
 
 export const DrinkList = ({ drinks, clickFn }) => {
   return (
-    <>
+    <Grid templateColumns="repeat(3, 1fr)" gap={4} justifyContent="center">
       {drinks.map((drink) => (
-        <DrinkItem key={drink.id} drink={drink} clickFn={clickFn} />
+        <GridItem key={drink.id}>
+          <DrinkItem key={drink.id} drink={drink} clickFn={clickFn} />
+        </GridItem>
       ))}
-    </>
+    </Grid>
   );
 };
 // this component will map over the drinks array and for each drink it will render a <DrinkItem/> component.
